@@ -75,7 +75,10 @@ If you have images of the dataset, you can upload it to data-preprocess to proce
 
 To process the data you input the image, maximum price, minimum prices and the days over which it was collected. 
 
-    image_original = image location
-    max_price = maximum price of the product 
-    min_price = minimum price of the product
-    ndays = number of days the product price was recorded for
+image_original = image location
+
+max_price = maximum price of the product 
+
+min_price = minimum price of the product
+
+ndays = number of days the product price was recorded for
