@@ -36,12 +36,12 @@ fft_alg(prices, time, number of days to predit for, number of frequencies with m
 
 arma(prices[::(numer to condense data by)], number of values in the past to look at to see how correlated it is)
 
+Set result to the specific output you want to plot in plotting the full dataset cell. 
+
 
 ### Plotting the Full Dataset
     
-prediction_y = algorithm result you want to plot with the full dataset
-
-ax.set_aspect(set number to increace/decreace width of the graph)
+Plots the data the result in the previous cell.
     
 
 ### Price Prediction with Test vs Train Dataset
@@ -50,7 +50,7 @@ num_chop = points to remove from beginning and end for filtered data
 
 num_test_pts = number of points to test on
 
-you can comment out whichever algorithms you want to find the results for and the corresponding rmse calculation for that algorithm. 
+you can comment out whichever algorithms you want to find the results for and the corresponding rmse calculation for that algorithm. Set results to the prediction output you want to plot. 
 
 
 ### Plotting the Training and Predicted Data
