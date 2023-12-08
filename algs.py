@@ -145,23 +145,22 @@ def ARMA_alg(prices, order_val):
     
     # plotting
     size = int(len(prices) * 0.5)
-    train, test = prices[0:size], prices[size:2*size]
-    history = [x for x in train]
+    training, test = prices[0:size], prices[size:2*size]
+    history = [x for x in training]
     predictions = list()
     for t in range(len(test)):
+        # creates model and predicts for each point in test
         model = ARIMA(history, order=(order_val,1,0))
         model.initialize_approximate_diffuse()
         model_fit = model.fit()
-        output = model_fit.forecast()
-        predictions.append(output[0])
-        ## obs = test[t]
-        history.append(output[0])
-    rmse = sqrt(mean_squared_error(test, predictions))
-    # print('Test RMSE: %.3f' % rmse)
+        predictions.append(model_fit.forecast()[0])
+        history.append(test[t])
+    ## rmse = sqrt(mean_squared_error(test, predictions))
     pyplot.plot(test)
     pyplot.plot(predictions, color='red')
     pyplot.show()
-    
+
+    #returns one predicted point
     return res
 
 def rmse(a, b):
