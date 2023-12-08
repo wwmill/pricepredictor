@@ -34,7 +34,7 @@ lstm_alg(prices, time, days to predict, days in the past you look at for predict
 
 fft_alg(prices, time, number of days to predit for, number of frequencies with maximum amplitude to use)
 
-arma(prices[::(numer to condense data by)], number of values in the past to look at to see how correlated it is)
+arma(prices[::(number to condense data by)], number of values in the past to look at to see how correlated it is)
 
 Set result to the specific output you want to plot in plotting the full dataset cell. 
 
@@ -55,7 +55,7 @@ you can comment out whichever algorithms you want to find the results for and th
 
 ### Plotting the Training and Predicted Data
 
-prediction_y = result from algorithm you want to plot, eg pred_fft for FFT, pred_arma for ARMA, pred_lstm for LSTM, pred_lin_reg for non-linear regression
+Plots the result you choose in the earlier cell with the rest of the data.
 
 
 ### Optional-Baysian Optimization of Parameters for LSTM
