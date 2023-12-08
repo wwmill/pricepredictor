@@ -20,6 +20,15 @@ from matplotlib import pyplot
 from math import sqrt
 from sklearn.metrics import mean_squared_error
 
+from skopt import Optimizer
+from skopt.space.space import Real, Integer
+from skopt.plots import plot_gaussian_process, plot_objective
+from sklearn.gaussian_process.kernels import Matern
+from skopt.learning import GaussianProcessRegressor as GPR
+import random
+from datetime import datetime
+import os
+
 def non_lin_reg(prices, time, lookahead, num_days, order):
     cols2 = time.shape[0]
     # time_add = np.linspace(num_days, num_days+lookahead, lookahead)
